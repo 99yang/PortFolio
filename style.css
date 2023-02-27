@@ -17,7 +17,7 @@
     --color-deep-purple: #805acb;
     --color-purple: #b388ff;
     --color-light-purple: #e7b9ff;
-    --color-nav-purple: #8075b1;
+    --color-nav-purple: #9282b6;
 
     /* Font size */
     --font-large: 48px;
@@ -56,6 +56,13 @@ a {
 ul {
     list-style: none;
     padding-left: 0;
+}
+
+button {
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    outline: none;
 }
 
 /* Typography */
@@ -125,4 +132,33 @@ p {
 
 .navbar__menu__item:hover {
     background-color: var(--color-deep-purple);
+}
+
+/* Home */
+#home {
+    background: url('imgs/background.png') center/cover no-repeat;
+    padding: 40px;
+    /* text-align: 중앙으로 */
+    text-align: center;
+}
+
+.home__avatar {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 2px solid var(--color-light-white);
+}
+
+.home__title,
+.home__description {
+    color: var(--color-white);
+}
+
+.home__contact {
+    color: var(--color-white);
+    font-size: var(--weight-regular);
+    margin: 24px;
+    padding: 8px 12px;
+    border: 2px solid var(--color-white); 
+    border-radius: var(--size-border-radius);
 }
