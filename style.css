@@ -511,6 +511,28 @@ p {
         width: 100%;
         display: none;
     }
+
+    .about__majors {
+        flex-direction: column;
+    }
+
+    .major {
+        margin-bottom: 38px;
+    }
+
+    .skillset {
+        flex-direction: column;
+    }
+
+    .project {
+        /* flex-grow: 1 > 화면에 맞춰서 꽉 채워줌 */
+        flex-grow: 1;
+    }
+
+    .testimonial__avatar {
+        width: 80px;
+        height: 80px;
+    }
 }
 
 
@@ -521,6 +543,7 @@ list-style: none > 리스트 옆에 점 없애기
     기본값은 검은 원
 flex-direction: 의 기본값은 row이다. (양옆으로)
     위아래로 바꿀 경우 column
+flex-grow: 1 > 화면에 맞춰서 꽉 채워줌
 position: 기본은 static이다.
 position: absolute > 기존 자리에서 빠져나오기
 absolute 쓸 경우
@@ -531,6 +554,8 @@ absolute 쓸 경우
     project에서 position을 결정하게 해준다.
 
 @media 쿼리문에 들어갈 내용은 최소한의 것만 들어가야한다.
+    반응형 팁은 flex-direction: column; 으로 설정하면
+    대부분 예쁘게 수직으로 떨어짐.
 
 opacity로 할경우 투명도 설정이기 때문에
     마우스가 hover될 경우 클릭이 됨
