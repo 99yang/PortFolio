@@ -408,6 +408,49 @@ p {
     background-color: var(--color-dark-white);
 }
 
+/* Testimonial */
+#testimonials {
+    background-color: var(--color-light-white);
+}
+
+.testimonials {
+    margin: 40px;
+}
+
+.testimonial {
+    display: flex;
+    margin: 32px 0;
+}
+
+.testimonial__avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+    /* nth-child() >> odd=홀수일 때, even=짝수일 때 */
+.testimonial__avatar:nth-child(odd) {
+    margin-right: 40px;
+}
+
+.testimonial__avatar:nth-child(even) {
+    margin-left: 40px;
+}
+
+.testimonial__speech-bubble {
+    padding: 18px;
+    background-color: var(--color-white);
+}
+
+.testimonial__speech-bubble p {
+    color: var(--color-light-grey);
+}
+
+.testimonial__speech-bubble a {
+    color: var(--color-purple);
+}
+
+
+
 /* 
 - Summary -
 position: 기본은 static이다 
