@@ -102,13 +102,23 @@ p {
 /* Navbar */
 /* # = id 선택자 */
 #navbar {
+    /* fixed > 원래 위치와 상관없이 위치지정, 
+    상위 요소에 영향 안받음 */
+    position: fixed;
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    background-color: var(--color-nav-purple);
+    background-color: transparent;
     /* align-items = 로고 가운데로 정렬 */
     align-items: center;
     color: var(--color-white);
     padding: 16px;
+    transition: all var(--animation-duration) ease-in-out;
+}
+
+#navbar.navbar--dark {
+    background-color: var(--color-nav-purple);
+    padding: 8px;
 }
 
 /* . = class 선택자 */
@@ -154,6 +164,7 @@ p {
 #home {
     background: url('imgs/background.png') center/cover no-repeat;
     padding: 40px;
+    padding-top: 120px;
     /* text-align: 중앙으로 */
     text-align: center;
 }
@@ -541,12 +552,20 @@ p {
 - Summary -
 list-style: none > 리스트 옆에 점 없애기
     기본값은 검은 원
+
+    * flex
 flex-direction: 의 기본값은 row이다. (양옆으로)
     위아래로 바꿀 경우 column
 flex-grow: 1 > 화면에 맞춰서 꽉 채워줌
+
+    * position
 position: 기본은 static이다.
-position: absolute > 기존 자리에서 빠져나오기
-absolute 쓸 경우
+position: relative > static의 원래 위치부터 계산
+position: fixed > 원래 위치와 상관없이 위치지정, 
+    상위 요소에 영향 안받음
+position: absolute > 원래 위치와 상관없이 위치지정,
+    가장 가까운 상위 요소 기준으로 위치 영향 받음
+    absolute 쓸 경우
     1.근접한 부모 노드중 기본값인 position: static이 아닌
     부모를 찾아가게된다.
     2.부모인 project는 기본값이기 때문에 가장 위까지 간다.
