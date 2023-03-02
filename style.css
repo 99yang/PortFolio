@@ -57,6 +57,7 @@ a {
 }
 
 ul {
+    /* list-style: none > 리스트 옆에 점 없애기 */
     list-style: none;
     padding-left: 0;
 }
@@ -135,6 +136,18 @@ p {
 
 .navbar__menu__item:hover {
     background-color: var(--color-deep-purple);
+}
+
+.navbar__toggle-btn {
+    position: absolute;
+    /* right: ??px > 오른쪽에서 ??px 떨어진 곳에 위치 */
+    top: 24px;
+    right: 32px;
+    font-size: 24px;
+    color: var(--color-white);
+    /* opacity로 할경우 투명도 설정이기 때문에
+        마우스가 hover될 경우 클릭이 됨 */
+    display: none;
 }
 
 /* Home */
@@ -478,16 +491,48 @@ p {
     color: var(--color-yellow);
 }
 
+/* For below 768px screen width */
+@media screen and (max-width: 768px) {
+    .navbar__toggle-btn {
+        display: block;
+    }
+
+    #navbar {
+        /* 반응형으로 줄어들 경우 위에서 아래로 표시 */
+        flex-direction: column;
+        /* column일 경우 수직으로 중심으로 시작하기때문에
+            flex-start로 왼쪽으로 정렬 */
+        align-items: flex-start;
+    }
+
+    .navbar__menu {
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        display: none;
+    }
+}
+
 
 
 /* 
 - Summary -
-position: 기본은 static이다 
-position: absolute 를 쓰면
+list-style: none > 리스트 옆에 점 없애기
+    기본값은 검은 원
+flex-direction: 의 기본값은 row이다. (양옆으로)
+    위아래로 바꿀 경우 column
+position: 기본은 static이다.
+position: absolute > 기존 자리에서 빠져나오기
+absolute 쓸 경우
     1.근접한 부모 노드중 기본값인 position: static이 아닌
     부모를 찾아가게된다.
     2.부모인 project는 기본값이기 때문에 가장 위까지 간다.
     3.그래서 project에 position: relative를 써서
     project에서 position을 결정하게 해준다.
 
+@media 쿼리문에 들어갈 내용은 최소한의 것만 들어가야한다.
+
+opacity로 할경우 투명도 설정이기 때문에
+    마우스가 hover될 경우 클릭이 됨
+    따라서, 아예 지울 경우 display: none; 을 이용한다.
 */
