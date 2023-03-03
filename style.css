@@ -505,6 +505,25 @@ p {
     color: var(--color-yellow);
 }
 
+
+/* Scroll */
+.arrow-up {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    width: 70px;
+    height: 70px;
+    font-size: 50px;
+    background-color: var(--color-nav-purple);
+    color: var(--color-white);
+    border-radius: 50%;
+    display: none;
+}
+
+.arrow-up.visible {
+    display: block;
+}
+
 /* For below 768px screen width */
 @media screen and (max-width: 768px) {
     .navbar__toggle-btn {
