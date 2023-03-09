@@ -517,11 +517,14 @@ p {
     background-color: var(--color-nav-purple);
     color: var(--color-white);
     border-radius: 50%;
-    display: none;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 300ms ease-in;
 }
 
 .arrow-up.visible {
-    display: block;
+    opacity: 1;
+    pointer-events: auto;
 }
 
 /* For below 768px screen width */

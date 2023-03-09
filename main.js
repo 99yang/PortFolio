@@ -35,10 +35,26 @@ document.addEventListener('scroll', () => {
     home.style.opacity = (1- window.scrollY / homeHeight);
 });
 
+// Show "arrow up" button when scrolling
+const arrowUp = document.querySelector('.arrow-up');
+document.addEventListener('scroll', () => {
+    if (window.scrollY > homeHeight / 2) {
+        arrowUp.classList.add('visible');
+    } else {
+        arrowUp.classList.remove('visible');
+    }
+});
+
+// "arrow up" 버튼을 클릭했을 때
+arrowUp.addEventListener('click', () => {
+    scrollIntoView('#home');
+});
+
 function scrollIntoView(selector) {     // 반복코드 최소화
     const scrollTo = document.querySelector(selector);
     scrollTo.scrollIntoView({behavior: "smooth"});
 }
+
 
 
 /* 
