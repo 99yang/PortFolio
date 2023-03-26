@@ -430,7 +430,7 @@ p {
 }
 
 .project__description h3 {
-    color: var(--color-white);
+    color: var(--color-orange);
 }
 
 .project__description h3:after {
@@ -439,9 +439,9 @@ p {
     display: block;
     position: relative;
     left: 50%;
-    width: 25px;
+    width: 50px;
     height: 2px;
-    margin-left: -12px;
+    transform: translateX(-50%);
     margin-top: 8px;
     background-color: var(--color-dark-white);
 }
@@ -550,6 +550,11 @@ p {
         /* column일 경우 수직으로 중심으로 시작하기때문에
             flex-start로 왼쪽으로 정렬 */
         align-items: flex-start;
+        background-color: var(--color-nav-purple);
+    }
+
+    #navbar.navbar-dark {
+        padding: 16px;
     }
 
     .navbar__menu {
@@ -557,6 +562,11 @@ p {
         text-align: center;
         width: 100%;
         display: none;
+        padding-top: 32px;
+    }
+
+    .navbar__menu.open {
+        display: block;
     }
 
     .about__majors {
