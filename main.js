@@ -50,6 +50,38 @@ arrowUp.addEventListener('click', () => {
     scrollIntoView('#home');
 });
 
+// Projects
+const workBtnContainer = document.querySelector('.work__categories');
+const projectContainer = document.querySelector('.work__projects');
+const projects = document.querySelectorAll('.project');
+workBtnContainer.addEventListener('click', (e) => {
+    const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+    if (filter == null){
+        return;
+    }
+
+    projectContainer.classList.add('anim-out');
+    
+    // 0.3초뒤 아래 코드를 실행시켜줌
+    setTimeout(() => {
+        projects.forEach((project) => {
+            if(filter === '*' || filter === project.dataset.type) {
+                project.classList.remove('invisible');
+            } else {
+                project.classList.add('invisible');
+            }
+        });
+        // 이 코드와 동일한 기능
+        // let project;
+        // for(let i=0; i<projects.length; i++){
+        //     project = projects[i];
+        // }
+        projectContainer.classList.remove('anim-out');
+    }, 300);
+
+});
+
+
 function scrollIntoView(selector) {     // 반복코드 최소화
     const scrollTo = document.querySelector(selector);
     scrollTo.scrollIntoView({behavior: "smooth"});

@@ -220,26 +220,26 @@
             <h1>My work</h1>
             <h3>Projects</h3>
             <div class="work__categories">
-                <button class="category__btn active">All<span class="category__count">3</span></button>
-                <button class="category__btn">Front-end<span class="category__count">3</span></button>
-                <button class="category__btn">Mobile<span class="category__count">0</span></button>
-                <button class="category__btn">Back-end<span class="category__count">0</span></button>
+                <button class="category__btn active" data-filter="*">All<span class="category__count">3</span></button>
+                <button class="category__btn" data-filter="front-end">Front-end<span
+                        class="category__count">3</span></button>
+                <button class="category__btn" data-filter="mobile">Mobile<span class="category__count">0</span></button>
+                <button class="category__btn" data-filter="back-end">Back-end<span
+                        class="category__count">0</span></button>
             </div>
 
             <div class="work__projects">
                 <!-- 포트폴리오 사이트 -->
-                <a href="https://github.com/99yang/PortFolio" class="project" target="blank""
-            >
-            <img src=" imgs/projects/portfolio-site.png" alt="PortFolio" class="project__img">
+                <a href="https://github.com/99yang/PortFolio" class="project" target="blank" data-type="front-end">
+                    <img src=" imgs/projects/portfolio-site.png" alt="PortFolio" class="project__img">
                     <div class="project__description">
                         <h3>PortFolio Site</h3>
                         <span>Clone coding with HTML, CSS, JAVASCRIPT</span>
                     </div>
                 </a>
                 <!-- 대학교 웹플밍 팀플 (CRUD) -->
-                <a href="" class="project" target="blank""
-            >
-            <img src=" imgs/projects/hoit.png" alt="Hoit-market" class="project__img">
+                <a href="#" class="project" target="blank" data-type="front-end">
+                    <img src=" imgs/projects/hoit.png" alt="Hoit-market" class="project__img">
                     <div class="project__description">
                         <h3>대학교 Team project: Hoit Market</h3>
                         <span>
@@ -251,9 +251,8 @@
                     </div>
                 </a>
                 <!-- 졸업프로젝트 캡스톤디자인 -->
-                <a href="" class="project" target="blank""
-            >
-            <img src=" imgs/projects/imgEx.jpg" alt="졸작" class="project__img">
+                <a href="#" class="project" target="blank" data-type="front-end">
+                    <img src=" imgs/projects/imgEx.jpg" alt="졸작" class="project__img">
                     <div class="project__description">
                         <h3>졸업프로젝트: Happy Time</h3>
                         <span>
